@@ -37,23 +37,29 @@
                     <th>Nombre</th>
                     <th id="description">Descripcion</th>
                     <th>Fecha</th>
-                </tr>         
-                    <% data.forEach(element => { %>
-                        <tr>
-                        <td><%= element.name %></td>
-                        <td>
-                            <%= element.description %>
-                        </td>
-                        <td>
-                            <%= element.date %>
-                        </td>
-                        </tr>
-                    <% }) %>
+                    <th>Acciones</th>
+                </tr>      
+                <% data.forEach(element=> { %>
+                    <tr>
+                    <td><%= element.name %></td>
+                    <td>
+                        <%= element.description + ' ' + element.status%>
+                    </td>
+                    <td>
+                        <%= element.date %>
+                    </td>
+                    <td>
+                        <a href="/done/<%= element._id %>" id="delete">Done</a>
+                        <a href="/delete/<%= element._id %>" id="delete">Delete</a>
+                        <a href="/edit/<%= element._id %>" id="delete">Edit</a>
+                    </td>
+                    </tr>
+                <% }) %>
             </table>
         </div>
     </div>
 
-
+    
 
 </body>
 

@@ -30,7 +30,7 @@
 }
 
 .list{
-    width: 50%;
+    width: 55%;
 }
 
 .form__title{
@@ -75,9 +75,5 @@
 
 .list td{
     text-align: center;
-}
-
-#description{
-    width: 50%;
 }
 

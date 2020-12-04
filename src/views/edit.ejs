@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Tareas</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__title">Pagina de tareas</h1>
+    </header>
+
+    <div class="container">
+        <form action="/save/<%=data._id%>" method="POST" class="form block">
+            <h2 class="form__title">Agregar Tarea</h2>
+            <div class="form_group">
+                <label>Name:</label>
+                <input type="text" name="name" value="<%=data.name%>">
+            </div>
+
+            <div class="form_group">
+                <label>Descripcion:</label>
+                <textarea name="description" cols="30" rows="10"><%=data.description%></textarea>
+            </div>
+
+            <input type="submit" value="Crear" class="form__button">
+        </form>
+    </div>
+
+    
+
+</body>
+
+</html>
